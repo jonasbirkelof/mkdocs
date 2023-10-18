@@ -1,3 +1,31 @@
 site_name: My Docs
 theme:
   name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: blue grey
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: blue grey
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - search.suggest
+nav:
+  - Home: index.md
+  - Beets CSS:
+    - Om Beets CSS: beets-css/index.md
+  - Beets Layout:
+    - Om Beets Layout: beets-layout/index.md
+  - Beets PHP:
+    - Om Beets PHP: beets-php/index.md
+plugins:
+  - search
